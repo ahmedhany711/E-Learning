@@ -1,0 +1,22 @@
+/* Custom progress bar style */
+
+.custom-progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: #f5f4f4;
+}
+
+
+/* Customize the progress bar color */
+
+.custom-progress::-webkit-progress-bar {
+    background-color: #dddbdb;
+}
+
+
+/* Customize the color of the progress */
+
+.custom-progress::-webkit-progress-value {
+    background-color: #B4A7F5;
+}

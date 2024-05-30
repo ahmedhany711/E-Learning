@@ -1,0 +1,96 @@
+
+:root {
+    --dreamslms_primary_color: #ff6575;
+}
+
+:root {
+    --dreamslms_primary_color_opacity: #ff657599;
+}
+
+:root {
+    --dreamslms_primary_color_opacity_more: #ff657530;
+}
+
+:root {
+    --dreamslms_secondary_color: #002058;
+}
+
+:root {
+    --dreamslms_btn_primary_back: #FF6575;
+}
+
+:root {
+    --dreamslms_btn_primary_color: #ffffff;
+}
+
+:root {
+    --dreamslms_btn_primary_hover: #e72f41;
+}
+
+:root {
+    --dreamslms_btn_secondary_back: #ffffff;
+}
+
+:root {
+    --dreamslms_btn_secondary_color: #392C7D;
+}
+
+:root {
+    --dreamslms_btn_secondary_hover: #B4A7F5;
+}
+
+:root {
+    --dreamslms_breadcrumbtitle_tcolor: #002058;
+}
+
+:root {
+    --dreamslms_breadcrumb_tcolor: #685f78;
+}
+
+:root {
+    --dreamslms_header_login_color: #685f78;
+}
+
+:root {
+    --dreamslms_header_login_hovercolor: #ffffff;
+}
+
+:root {
+    --dreamslms_header_login_backcolor: #f4f4f4;
+}
+
+:root {
+    --dreamslms_header_login_backhovercolor: #FF6575;
+}
+
+:root {
+    --dreamslms_header_login_bordercolor: #f4f4f4;
+}
+
+:root {
+    --dreamslms_header_register_color: #B4A7F5;
+}
+
+:root {
+    --dreamslms_header_register_hovercolor: #ffffff;
+}
+
+:root {
+    --dreamslms_header_register_backcolor: #ffffff;
+}
+
+:root {
+    --dreamslms_header_register_backhovercolor: #FF6575;
+}
+
+:root {
+    --dreamslms_header_register_bordercolor: #B4A7F5;
+}
+
+:root {
+    --dreamslms_footer_backcolor_style1: #ffffff;
+}
+
+:root {
+    --dreamslms_footer_backcolor_style2: #FF6575;
+}
