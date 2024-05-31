@@ -29,7 +29,7 @@ import InstructorsPage from "./components/Instructors/InstructorsPage";
 
 function App()
 {
-    // Animation
+    // Animationn
     useEffect(() =>
     {
         Aos.init({
