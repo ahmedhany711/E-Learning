@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import Footer from '../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +7,6 @@ export default function Categories()
 {
 
     const CategoryData = useSelector((state) => state.Categories);
-    const dispatch = useDispatch();
     const [selectedCategory, setSelectedCategory] = useState(" ");
 
 
@@ -158,15 +157,15 @@ export default function Categories()
                         <br></br>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10" >
 
-                            {selectedCategory == "Front_End" ? (
+                            {selectedCategory === "Front_End" ? (
 
                                 frontCourses(selectedCategory)
 
-                            ) : selectedCategory == "Back_End" ? (
+                            ) : selectedCategory === "Back_End" ? (
 
                                 BackEndCourses(selectedCategory)
 
-                            ) : selectedCategory == " " ? (
+                            ) : selectedCategory === " " ? (
                                 CategoryData.map((data) =>
                                 {
                                     return (

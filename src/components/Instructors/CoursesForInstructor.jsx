@@ -17,9 +17,6 @@ export const selectLoggedInUserId = (state) => state.auth.user?.id;
 
 const CoursesForInstructor = ({ showFooter, courses, setSelectedCourse }) =>
 {
-    const [loggedInUserId, setLoggedInUserId] = useState(null);
-
-
 
 
     // State to track the account details
@@ -129,7 +126,7 @@ const CoursesForInstructor = ({ showFooter, courses, setSelectedCourse }) =>
                                     <div className="mt-10 flex flex-col gap-3 justify-center mx-auto">
 
                                         {
-                                            data.archived == false ? (
+                                            data.archived === false ? (
                                                 <Link
                                                     // to={`/courses/${data.title}/${data.id}`}
                                                     onClick={() =>
@@ -962,7 +959,7 @@ const CourseManager = () =>
     return (
         <>
             {/* Render either CoursesForInstructor or CourseDetails based on selectedCourse */}
-            {selectedCourse == false ? (
+            {selectedCourse === false ? (
                 <CourseDetails selectedCourse={selectedCourse} />
             ) : (
                 <CoursesForInstructor courses={courses} setSelectedCourse={setSelectedCourse} />

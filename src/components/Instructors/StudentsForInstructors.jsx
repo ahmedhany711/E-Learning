@@ -9,24 +9,17 @@ import { addToCourses, deleteCourse } from "../../rtk/Slices/StudentsSlice";
 import
 {
     Account_Details,
-    Student_Details,
 } from "../../rtk/Slices/AccountDetailsSlice";
-import NAV from "../Nav/NAV";
 import InstructorNAV from "./InstructorNAV";
 
 
 export default function StudentsForInstructor({ title })
 {
     const studentsData = useSelector((state) => state.StudentS);
-    const CourseData = useSelector((state) => state.Courses.courses);
 
 
     const dispatch = useDispatch();
 
-    const handleShowProfile = (student) =>
-    {
-        dispatch(Details(student));
-    };
 
     const handleAccessMaterials = (studentId, courseId) => { };
 
@@ -43,15 +36,7 @@ export default function StudentsForInstructor({ title })
         (state) => state.StudentS.find((student) => student.isLoggedIn)?.id
     );
 
-    // Update handleCourseSelection to accept the selected course
-    const handleCourseSelection = (course) =>
-    {
-        if (course) {
-            dispatch(addToCourses({ studentId: loggedInUserId, courseData: course }));
-        } else {
-            console.error("No course selected");
-        }
-    };
+
 
     return (
         <>

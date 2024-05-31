@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const CourseComponent = () =>
 {
     const CourseData = useSelector((state) => state.Courses.courses);
-    const dispatch = useDispatch();
+
 
     return (
         <div id='course' className='mx-auto px-20 my-2'>
@@ -93,71 +93,3 @@ const CourseComponent = () =>
 };
 
 export default CourseComponent;
-// {/*  Box 1 */ }
-// <div className="bg-white pb-10  rounded shadow-md">
-//     {/* Image */}
-//     <img src={c4} alt="Course 1" className="mx-auto mb-4 w-full rounded-2xl" />
-//     {/* title */}
-//     <h2 className="text-2xl font-semibold text-title">HTML</h2>
-//     {/* Description */}
-//     <p className="text-lg text-headerText px-5">David Powell Instructor  Complete HTML, CSS and Javascript Course.</p>
-//     <div className='mt-10'>
-//         <Link to={'/Courses'}>
-//             <button className='bg-white px-4 py-2 rounded-2xl border-4 font-semibold border-SecondButton text-SecondButton  hover:bg-primaryColor hover:text-white '>
-//                 Enroll Now
-//             </button>
-//         </Link>
-//     </div>
-// </div>
-// {/* Box 2 */ }
-// <div className="bg-white pb-10  rounded shadow-md">
-//     {/* Image */}
-//     <img src={c2} alt="Course 1" className="mx-auto mb-4 w-full rounded-2xl" />
-//     {/* title */}
-//     <h2 className="text-2xl font-semibold text-title">Heba Ahmed</h2>
-//     {/* Description */}
-//     <p className="text-lg text-headerText px-5">David Powell Instructor  Complete HTML, CSS and Javascript Course.</p>
-//     <div className='mt-10'>
-//         <Link to={'/Courses'}>
-//             <button className='bg-white px-4 py-2 rounded-2xl border-4 font-semibold border-SecondButton text-SecondButton  hover:bg-primaryColor hover:text-white '>
-//                 Enroll Now
-//             </button>
-//         </Link>
-//     </div>
-// </div>
-// {/* Box 3 */ }
-// <div className="bg-white pb-10   rounded shadow-md">
-//     {/* Image */}
-//     <img src={c3} alt="Course 1" className="mx-auto mb-4 w-full rounded-2xl" />
-//     {/* title */}
-//     <h2 className="text-2xl font-semibold text-title">Heba Ahmed</h2>
-//     {/* Description */}
-//     <p className="text-lg text-headerText px-5">David Powell Instructor  Complete HTML, CSS and Javascript Course.</p>
-//     <div className='mt-10'>
-//         <Link to={'/Courses'}>
-//             <button className='bg-white px-4 py-2 rounded-2xl border-4 font-semibold border-SecondButton text-SecondButton  hover:bg-primaryColor hover:text-white '>
-//                 Enroll Now
-//             </button>
-//         </Link>
-//     </div>
-// </div>
-//   {/* Box 4 */}
-// {/* <div className="bg-white pb-10   rounded shadow-md">
-//     {/* Image */}
-//     <img src={c4} alt="Course 1" className="mx-auto mb-4 w-full rounded-2xl" />
-//     {/* title */}
-//     <h2 className="text-2xl font-semibold text-title">Heba Ahmed</h2>
-//     {/* Description */}
-//     <p className="text-lg text-headerText px-5">David Powell Instructor  Complete HTML, CSS and Javascript Course.</p>
-//     <a href="#" className="button inline-block mt-4 bg-primaryColor text-white px-4 py-2  hover:bg-primaryColor/80 transition duration-300  no-underline rounded-xl ">Enroll Now</a>
-// </div>
-// {/* Box 5 */ }
-// <div className="bg-white pb-10  rounded shadow-md">
-//     {/* Image */}
-//     <img src={c1} alt="Course 1" className="mx-auto mb-4 w-full rounded-2xl" />
-//     {/* title */}
-//     <h2 className="text-2xl font-semibold text-title">Heba Ahmed</h2>
-//     {/* Description */}
-//     <p className="text-lg text-headerText px-5">David Powell Instructor  Complete HTML, CSS and Javascript Course.</p>
-//     <a href="#" className="button inline-block mt-4 bg-primaryColor text-white px-4 py-2  hover:bg-primaryColor/80 transition duration-300  no-underline rounded-xl ">Enroll Now</a>
-// </div> */}

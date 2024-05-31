@@ -14,14 +14,6 @@ const CoursesPageForStudent = ({ showFooter }) =>
 {
     const CourseData = useSelector((state) => state.Courses.courses);
     const dispatch = useDispatch();
-    const students = useSelector((state) => state.StudentS);
-
-    const [selectedCourseId, setSelectedCourseId] = useState(null);
-    const [selectedAssignCourseId, setSelectedAssignCourseId] = useState(null);
-
-    const [selectedCourse, setSelectedCourse] = useState(null);
-    // Add state for selected course
-
 
     // Retrieve the logged-in user ID from the students slice
     const loggedInUserId = useSelector(
@@ -108,7 +100,7 @@ const CoursesPageForStudent = ({ showFooter }) =>
                                     <div className="mt-10 flex flex-col gap-3 justify-center mx-auto">
 
                                         {
-                                            data.archived == false ? (
+                                            data.archived === false ? (
                                                 <Link
                                                     to={"/CoursesForStudent "}
                                                     onClick={() =>

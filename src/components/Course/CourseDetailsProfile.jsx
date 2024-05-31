@@ -1,39 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import Assingment from '../Assingment/Assingment';
 import { markLectureCompleted } from '../../rtk/Slices/StudentsSlice';
 import './C_Details.scss';
-import Footer from '../Footer/Footer';
+
 import { gradeAssignment } from '../../rtk/Slices/CoursesSlice';
 
-// const CourseDetailsProfile = ({ courseDetails }) =>
-// {
-//     const dispatch = useDispatch();
-//     const [completedLectures, setCompletedLectures] = useState([]);
-//     const [progress, setProgress] = useState(0);
-
-//     const handleLectureCompletion = (lectureId) =>
-//     {
-//         if (!completedLectures.includes(lectureId)) {
-//             setCompletedLectures([...completedLectures, lectureId]);
-//             dispatch(markLectureCompleted({ courseId: courseDetails.id, lectureId }));
-//         } else {
-//             setCompletedLectures(completedLectures.filter(id => id !== lectureId));
-//             // Dispatch an action to update lecture completion status in Redux
-//         }
-//     };
-
-//     useEffect(() =>
-//     {
-//         if (courseDetails && courseDetails.lectures) {
-//             const totalLectures = courseDetails.lectures.length;
-//             const completedCount = completedLectures.length;
-//             const progress = totalLectures > 0 ? (completedCount / totalLectures) * 100 : 0;
-//             setProgress(progress);
-//         }
-//     }, [completedLectures, courseDetails]);
 
 const CourseDetailsProfile = ({ courseDetails, studentId }) =>
 {
@@ -66,10 +39,7 @@ const CourseDetailsProfile = ({ courseDetails, studentId }) =>
         }
     }, [completedLectures, courseDetails, studentId]);
 
-    const handleGradeAssignment = (assignment) =>
-    {
-        dispatch(gradeAssignment({ courseId: courseDetails.id, assignmentId: assignment.id, grade: assignment.grade }));
-    };
+
 
     const handleAssignmentSelect = (assignmentId) =>
     {
@@ -109,12 +79,7 @@ const CourseDetailsProfile = ({ courseDetails, studentId }) =>
                                 <span className="text-sm font-bold mt-1 text-title">{progress.grade}%</span>
                                 <p><strong>Completed:</strong> {progress.completed ? 'Yes' : 'No'}</p>
                             </div>
-                            {/* 
-                            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                                <h3 className="text-xl font-bold mb-2 text-title">Progress</h3>
-                                <p><strong>Grade:</strong> {progress.grade}%</p>
-                                <p><strong>Completed:</strong> {progress.completed ? 'Yes' : 'No'}</p>
-                            </div> */}
+                
 
                         </div>
                     </div>

@@ -16,16 +16,6 @@ const CourseDetails = ({showNAv }) =>
     const [completedLectures, setCompletedLectures] = useState([]);
     const [progress, setProgress] = useState(0);
 
-    const handleLectureCompletion = (lectureId) =>
-    {
-        if (!completedLectures.includes(lectureId)) {
-            setCompletedLectures([...completedLectures, lectureId]);
-            dispatch(markLectureCompleted({ courseId, lectureId }));
-        } else {
-            setCompletedLectures(completedLectures.filter(id => id !== lectureId));
-            // Dispatch an action to update lecture completion status in Redux
-        }
-    };
 
     useEffect(() =>
     {
@@ -55,7 +45,7 @@ const CourseDetails = ({showNAv }) =>
                     </div>
                 ))}
                 <div className='flex justify-center'>
-                    {/* <Assingment courseId={parseInt(courseId)} /> */}
+                   
                 </div>
 
 

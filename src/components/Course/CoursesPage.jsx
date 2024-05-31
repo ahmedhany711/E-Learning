@@ -37,14 +37,14 @@ const CoursesPage = ({ showFooter }) =>
   {
     setSelectedAssignCourseId(courseId); // Set the selected course ID
     // setSelectedCourseId(courseId);
-    setSelectedCourse(CourseData.find(course => course.id === courseId));
+    setSelectedCourse(CourseData.find(course => course.id == courseId));
   };
 
   // Function to add a student to the course
   const handleAddStudentToCourse = (studentId) =>
   {
     if ((selectedCourseId || selectedAssignCourseId) && selectedCourse) {
-      const studentData = students.find(student => student.id === studentId);
+      const studentData = students.find(student => student.id == studentId);
 
       if (studentData) {
         dispatch(addStudentToCourse({ courseId: (selectedCourseId || selectedAssignCourseId), studentData }));
@@ -63,7 +63,7 @@ const CoursesPage = ({ showFooter }) =>
     // Add other fields here...
   });
 
-  // == null ?  selectedAssignCourseId : selectedCourseId
+  // = null ?  selectedAssignCourseId : selectedCourseId
   // Function to handle course edit
   // Function to handle course edit
   const handleCourseEdit = () =>
@@ -101,9 +101,9 @@ const CoursesPage = ({ showFooter }) =>
   const handleArchive = (courseId) =>
   {
     // Find the index of the course by its ID
-    const courseIndex = CourseData.findIndex((course) => course.id === courseId);
+    const courseIndex = CourseData.findIndex((course) => course.id == courseId);
 
-    if (courseIndex !== -1) {
+    if (courseIndex != -1) {
       // Create a copy of the course object at the found index
       const updatedCourse = { ...CourseData[courseIndex] };
 
@@ -151,7 +151,7 @@ const CoursesPage = ({ showFooter }) =>
                         `}>
                         {data.category}
                       </p>
-                      {data.price === "Free" ? (
+                      {data.price == "Free" ? (
                         <p className={`text-white py-1 px-0 mb-0  rounded-lg text-lg 
                         ${data.archived ? ' bg-gray-400 ' : 'bg-[#83cd29]'}
                         `}>
@@ -196,7 +196,7 @@ const CoursesPage = ({ showFooter }) =>
                   <div className="mt-10 flex flex-col gap-3 justify-center mx-auto">
 
                     {
-                      data.archived == false ? (
+                      data.archived === false ? (
                         <Link
                           to={"/Courses"}
                           onClick={() =>

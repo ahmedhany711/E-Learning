@@ -173,20 +173,6 @@ export const Students = createSlice({
       }
     },
 
-    // markLectureCompleted: (state, action) =>
-    // {
-    //     const { studentId, courseId, lectureId } = action.payload;
-    //     const student = state.find(student => student.id === studentId);
-    //     if (student) {
-    //         const course = student.takenCourses.find(course => course.id === courseId);
-    //         if (course) {
-    //             const lecture = course.lectures.find(lecture => lecture.id === lectureId);
-    //             if (lecture) {
-    //                 lecture.completed = true; // Mark lecture as completed
-    //             }
-    //         }
-    //     }
-    // },
     Details: (state, action) =>
     {
       state.push(action.payload);
