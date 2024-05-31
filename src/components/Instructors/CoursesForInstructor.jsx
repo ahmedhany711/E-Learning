@@ -35,20 +35,7 @@ const CoursesForInstructor = ({ showFooter, courses, setSelectedCourse }) =>
             setAccountDetails([data]);
         }
     };
-    const [selectedCourseId, setSelectedCourseId] = useState(null);
-    const handleCourseSelection = (courseId) =>
-    {
-        // Assuming you have a state to track the selected course
 
-        // Check if the clicked course is already selected
-        if (selectedCourseId === courseId) {
-            // If already selected, deselect the course
-            setSelectedCourseId(null);
-        } else {
-            // If not selected, update the selected course
-            setSelectedCourseId(courseId);
-        }
-    };
 
 
     return (

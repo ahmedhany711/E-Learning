@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import CourseDetails from "./CourseDetails";
 import Footer from "../Footer/Footer";
 import { Details } from "../../rtk/Slices/DetailsSlice";
 import { addToCourses, updateEnrolledCourses } from "../../rtk/Slices/StudentsSlice";
@@ -19,10 +18,10 @@ const CoursesPage = ({ showFooter }) =>
   const [selectedAssignCourseId, setSelectedAssignCourseId] = useState(null);
 
   const [selectedCourse, setSelectedCourse] = useState(null);
-  // Add state for selected course
+ 
 
 
-  // Retrieve the logged-in user ID from the students slice
+
   const loggedInUserId = useSelector(
     (state) => state.StudentS.find((student) => student.isLoggedIn)?.id
   );
@@ -32,19 +31,18 @@ const CoursesPage = ({ showFooter }) =>
     dispatch(addToCourses({ studentId: loggedInUserId, courseData: course }));
   };
 
-  // Ensure you're dispatching the action with the correct payload
+
   const handleAssignStudents = (courseId) =>
   {
-    setSelectedAssignCourseId(courseId); // Set the selected course ID
-    // setSelectedCourseId(courseId);
-    setSelectedCourse(CourseData.find(course => course.id == courseId));
+    setSelectedAssignCourseId(courseId); 
+    setSelectedCourse(CourseData.find(course => course.id === courseId));
   };
 
   // Function to add a student to the course
   const handleAddStudentToCourse = (studentId) =>
   {
     if ((selectedCourseId || selectedAssignCourseId) && selectedCourse) {
-      const studentData = students.find(student => student.id == studentId);
+      const studentData = students.find(student => student.id === studentId);
 
       if (studentData) {
         dispatch(addStudentToCourse({ courseId: (selectedCourseId || selectedAssignCourseId), studentData }));
@@ -54,7 +52,6 @@ const CoursesPage = ({ showFooter }) =>
   };
 
   // Editttttttttt
-  // Add state for edited course details
   const [editedDetails, setEditedDetails] = useState({
     title: "",
     description: "",
@@ -94,16 +91,15 @@ const CoursesPage = ({ showFooter }) =>
   };
 
 
-  // Archiveeeeeeeeeeeeeeeeeeeeee
-  const [archivedCourses, setArchivedCourses] = useState([]);
+
 
   // Function to handle archiving a course
   const handleArchive = (courseId) =>
   {
     // Find the index of the course by its ID
-    const courseIndex = CourseData.findIndex((course) => course.id == courseId);
+    const courseIndex = CourseData.findIndex((course) => course.id === courseId);
 
-    if (courseIndex != -1) {
+    if (courseIndex !== -1) {
       // Create a copy of the course object at the found index
       const updatedCourse = { ...CourseData[courseIndex] };
 
@@ -151,7 +147,7 @@ const CoursesPage = ({ showFooter }) =>
                         `}>
                         {data.category}
                       </p>
-                      {data.price == "Free" ? (
+                      {data.price === "Free" ? (
                         <p className={`text-white py-1 px-0 mb-0  rounded-lg text-lg 
                         ${data.archived ? ' bg-gray-400 ' : 'bg-[#83cd29]'}
                         `}>

@@ -1,12 +1,11 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import CourseDetails from "./CourseDetails";
+
 import Footer from "../Footer/Footer";
 import { Details } from "../../rtk/Slices/DetailsSlice";
-import { addToCourses, updateEnrolledCourses } from "../../rtk/Slices/StudentsSlice";
-import { addStudentToCourse, deleteCourse, editCourseDetails } from "../../rtk/Slices/CoursesSlice";
+import { addToCourses } from "../../rtk/Slices/StudentsSlice";
 import StudentNAV from "../Students/StudentNAV";
 export const selectLoggedInUserId = (state) => state.auth.user?.id;
 

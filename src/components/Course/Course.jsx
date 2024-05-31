@@ -1,11 +1,8 @@
 import './Course.css'
-import React, { useContext } from 'react';
-import c1 from "../../images/c1.jpg";
-import c2 from "../../images/c2.jpg";
-import c3 from "../../images/c3.jpg";
-import c4 from "../../images/c4.jpg";
+import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const CourseComponent = () =>
 {

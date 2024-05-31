@@ -1,11 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Assingment from '../Assingment/Assingment';
 import { markLectureCompleted } from '../../rtk/Slices/StudentsSlice';
 import './C_Details.scss';
 
-import { gradeAssignment } from '../../rtk/Slices/CoursesSlice';
+
 
 
 const CourseDetailsProfile = ({ courseDetails, studentId }) =>

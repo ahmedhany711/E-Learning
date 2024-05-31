@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import './BottomHero.scss'
 
 import { FaCircleCheck } from "react-icons/fa6";
@@ -40,7 +39,7 @@ function BottomHero()
                         </div>
 
                         <button>
-                            <a>Read More</a>
+                            <a href='/'>Read More</a>
                         </button>
                     </div>
                 </section>

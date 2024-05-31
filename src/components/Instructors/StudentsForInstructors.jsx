@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../Students/Students.scss";
 import Footer from "../Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { Details } from "../../rtk/Slices/DetailsSlice";
 
-import { addToCourses, deleteCourse } from "../../rtk/Slices/StudentsSlice";
+import { deleteCourse } from "../../rtk/Slices/StudentsSlice";
 import
 {
     Account_Details,
@@ -25,16 +25,12 @@ export default function StudentsForInstructor({ title })
 
     const handleSubmitAssignment = (studentId, courseId, assignmentId) =>
     {
-        // Implement functionality to submit assignments
+
         console.log(
             `Submitting assignment for Student ID ${studentId}, Course ID ${courseId}, and Assignment ID ${assignmentId}`
         );
     };
 
-    // Retrieve the logged-in user ID from the students slice
-    const loggedInUserId = useSelector(
-        (state) => state.StudentS.find((student) => student.isLoggedIn)?.id
-    );
 
 
 
