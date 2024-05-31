@@ -1,11 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import html from "../../images/Html.jpg";
-import css from "../../images/css.png";
-import js from "../../images/JSpng.png";
-import php from "../../images/php.png";
-import nodejs from "../../images/nodejs.png";
-import react from "../../images/React.png";
-
 import c1 from "../../images/img1.jpg";
 import c2 from "../../images/img2.jpg";
 import c3 from "../../images/img3.jpg";

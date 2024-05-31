@@ -1,8 +1,7 @@
-// Dashboard.jsx
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryLabel, VictoryTheme, Background } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryLabel, VictoryTheme } from 'victory';
 import Footer from '../components/Footer/Footer';
 
 const Dashboard = () =>
@@ -58,19 +57,7 @@ const Dashboard = () =>
                                         labels={({ datum }) => datum.y} // Show data labels on bars
                                         labelComponent={<VictoryLabel dy={-10} />} // Adjust label position
                                     />
-                                    {/* Display number of courses and students at the bottom of bars */}
-                                    {/* <VictoryLabel
-                                        x={50}
-                                        y={235}
-                                        text={`${instructor.numOfCourses} Courses`}
-                                        style={{ fontSize: 12, fill: '#3182CE' }}
-                                    />
-                                    <VictoryLabel
-                                        x={200}
-                                        y={235}
-                                        text={`${instructor.numOfStudents} Students`}
-                                        style={{ fontSize: 12, fill: '#3182CE' }}
-                                    /> */}
+                                   
                                 </VictoryChart>
 
                             </div>

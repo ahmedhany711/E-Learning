@@ -5,7 +5,7 @@ import js from "../../images/JSpng.png";
 import php from "../../images/php.png";
 import nodejs from "../../images/nodejs.png";
 import react from "../../images/React.png";
-import { useSelector } from "react-redux";
+
 
 const initialState = {
     courses:
@@ -804,7 +804,7 @@ export const Courses = createSlice({
         },
         Details: (state, action) =>
         {
-            state.courses.push(action.payload); // Corrected line
+            state.courses.push(action.payload); 
         },
         submitAssignment: (state, action) =>
         {
@@ -858,10 +858,7 @@ export const Courses = createSlice({
                     return course;
                 })
             };
-            // const courseIndex = state.courses.findIndex(course => course.id === courseId);
-            // if (courseIndex !== -1) {
-            //     state.courses[courseIndex] = { ...state.courses[courseIndex], ...updatedDetails };
-            // }
+      
         },
         archiveCourse: (state, action) =>
         {

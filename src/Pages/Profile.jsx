@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Details } from '../rtk/Slices/CoursesSlice';
+
 import CourseDetailsProfile from '../components/Course/CourseDetailsProfile';
-import { Account_Details } from '../rtk/Slices/AccountDetailsSlice';
+
 
 const Profile = ({showtTitle}) =>
 {
     const students = useSelector((state) => state.Profile);
-    const dispatch = useDispatch();
     const [selectedCourse, setSelectedCourse] = useState(null);
 
     const toggleStudentProfiles = (courseId) =>
@@ -17,10 +16,7 @@ const Profile = ({showtTitle}) =>
     };
 
 
-    const handleShowProfile = (student) =>
-    {
-        dispatch(Account_Details(student)); // Dispatch the action to update the profile data
-    };
+
 
     return (
         <div className="container mx-auto py-20">

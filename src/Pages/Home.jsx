@@ -5,7 +5,6 @@ import TopCategory from '../components/Top Category/Top Category'
 import CourseComponent from '../components/Course/Course'
 import BottomHero from '../components/BottomHero/BottomHero'
 import Footer from '../components/Footer/Footer'
-import RoleSelector from './Role'
 import NAV from '../components/Nav/NAV'
 
 export default function Home()
